@@ -1,0 +1,35 @@
+// Сброс для кнопок
+=unbtn
+  padding: 0
+  border: 0
+  background: transparent
+  &:focus
+    outline: 0
+
+// Подчеркивание слева-направо по ховеру
+=underline($height: 2px)
+  position: relative
+  &::after
+    position: absolute
+    left: 0
+    content: ''
+    width: 100%
+    height: $height
+    background: #000
+    bottom: -16px
+    transform: scale(0, 1)
+    transition: transform .3s cubic-bezier(.165,.84,.44,1)
+    transform-origin: right top
+  &:hover::after
+    transform: scale(1, 1)
+    transform-origin: left top
+
+// Прокрутка с кастомным скроллбаром
+=scrollbar
+  -webkit-overflow-scrolling: touch
+  overflow-y: auto
+  &::-webkit-scrollbar
+    width: 4px
+    height: 4px
+    &-thumb
+      background-color: #000

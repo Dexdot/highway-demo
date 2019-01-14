@@ -1,0 +1,76 @@
+@include('../blocks/head.html')
+
+
+<!-- content -->
+<main class="page" data-router-wrapper>
+	<div data-router-view="index">
+
+		<!-- header -->
+		@include('../blocks/header.html')
+
+		<div class="bg">
+			<div class="bg__color"></div>
+			<img src="img/sport.jpg" alt="" class="bg__img" data-bg="sport">
+			<img src="img/nature.jpg" alt="" class="bg__img" data-bg="nature">
+			<img src="img/app.jpg" alt="" class="bg__img" data-bg="app">
+			<img src="img/fashion.jpg" alt="" class="bg__img" data-bg="fashion">
+			<div class="bg__cover"></div>
+		</div>
+
+		<div class="cases">
+
+			<a class="case" data-bg="sport" href="./1.html">
+				<div class="case__bg"></div>
+				<img class="case__arrow" src="img/arrow.svg" alt="Open">
+				<span class="case__num">01</span>
+				<h2 class="case__title">
+					Nike Promo
+				</h2>
+			</a>
+
+			<a class="case" data-bg="nature" href="./2.html">
+				<div class="case__bg"></div>
+				<img class="case__arrow" src="img/arrow.svg" alt="Open">
+				<span class="case__num">02</span>
+				<h2 class="case__title">
+					Beauteka Special
+				</h2>
+			</a>
+
+			<a class="case" data-bg="app" href="./3.html">
+				<div class="case__bg"></div>
+				<img class="case__arrow" src="img/arrow.svg" alt="Open">
+				<span class="case__num">03</span>
+				<h2 class="case__title">
+					Mobile App
+				</h2>
+			</a>
+
+			<a class="case" data-bg="fashion" href="./4.html">
+				<div class="case__bg"></div>
+				<img class="case__arrow" src="img/arrow.svg" alt="Open">
+				<span class="case__num">04</span>
+				<h2 class="case__title">
+					Larne Redesign
+				</h2>
+			</a>
+
+		</div>
+
+		<footer class="footer">
+			<button class="footer__btn">
+				view all works
+			</button>
+			<div class="footer__social">
+				<a href="https://medium.com" class="footer__social-link" target="_blank">medium</a>
+				<a href="https://behance.com" class="footer__social-link" target="_blank">behance</a>
+				<a href="https://dribbble.com" class="footer__social-link" target="_blank">dribbble</a>
+				<a href="https://facebook.com" class="footer__social-link" target="_blank">facebook</a>
+			</div>
+		</footer>
+	</div>
+</main>
+
+
+<!-- footer -->
+@include('../blocks/footer.html')

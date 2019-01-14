@@ -1,0 +1,68 @@
+.cases
+  display: flex
+  flex-direction: row
+  align-items: stretch
+  margin-top: 20vh
+  padding-left: 8vw
+  width: 100%
+
+.case
+  overflow: hidden
+  position: relative
+  display: flex
+  flex: 1
+  height: 200px
+  padding: 24px
+
+  cursor: pointer
+  border: 1px solid $g
+  border-right: none
+
+  color: $g
+  &:focus,
+  &:visited,
+  &:active
+    color: $g
+
+  &__arrow
+    width: 18px
+    height: 18px
+    position: absolute
+    bottom: 24px
+    left: 24px
+    transform: translate(25vw, 0)
+
+  &__title
+    max-width: 70%
+    +ex
+
+  &__num
+    position: absolute
+    top: -16px
+    left: 0
+    transform: translate(0, -100%)
+    +md
+    opacity: 0.7
+  
+  &__bg
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: -1
+    transform: translateY(100%)
+
+  &:nth-child(1) .case__bg
+    background: #BB4633
+  &:nth-child(2) .case__bg
+    background: #22AD44
+  &:nth-child(3) .case__bg
+    background: #34ACE0
+  &:nth-child(4) .case__bg
+    background: #57396A
+
+  &.is-active
+    .case__bg,
+    .case__arrow
+      transform: translate(0, 0)
